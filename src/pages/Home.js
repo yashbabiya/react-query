@@ -1,7 +1,56 @@
-import React from 'react'
+import axios from 'axios';
+import React, { useEffect, useState } from 'react'
+import { useQuery } from 'react-query';
 
 export default function Home() {
+
+
+  const [state, setstate] = useState();
+  const [isLoading, setIsLoading] = useState(true);
+  const getData = async() =>{
+
+    setIsLoading(true);
+    let data = await fetch('https://swapi.dev/api/people/')
+    // setstate(await data.json())
+    setIsLoading(false);
+
+    return await data.json();
+  }
+
+  const {data ,status} = useQuery('fetch data',getData);
+ 
+  useEffect(() => {
+    
+     setstate(data)
+  
+    }, [data]);
+
+
+
+
+ 
+
+  
+ 
+
+
   return (
-    <div>Home</div>
+    <div>
+      <h1>Home
+        </h1>
+
+      <br />
+      Loading : {isLoading ? "Yes" : "No"}
+      {
+        state && state.results && state.results.map((res)=>
+        <div className='h3'>
+        
+        <h3>{res.name}</h3>
+        <p>{res.gender}</p>
+        
+        </div>
+        )
+      }
+    </div>
   )
 }

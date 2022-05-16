@@ -2,4 +2,36 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+body {
+  background-color: rgb(21, 21, 21);
+}
+
+div {
+  padding: 1em;
+}
+div a {
+  text-decoration: none;
+  margin-right: 2em;
+}
+div img {
+  width: 20em;
+  margin: 5em 0;
+}
+div p {
+  margin-bottom: 2em;
+  font-size: 1.5em;
+}
+div b {
+  font-size: 1.5em;
+}
+
+.h3 {
+  padding: 1em;
+  margin: 2em 0;
+  background-color: rgb(16, 86, 156);
+  border-radius: 1em;
 }/*# sourceMappingURL=index.css.map */

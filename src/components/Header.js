@@ -6,6 +6,8 @@ export default function Header() {
     <div>
 
         <Link to='/'>Home</Link>
+        <Link to='/byeffect'>By useEffect</Link>
+        <Link to='/about'>About</Link>
         <br />
     </div>
   )
