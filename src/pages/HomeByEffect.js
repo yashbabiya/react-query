@@ -11,7 +11,7 @@ export default function HomeByEffect() {
   };
 
   useEffect(() => {
-    const x = getData();
+    getData();
   }, []);
   return (
     <div>
