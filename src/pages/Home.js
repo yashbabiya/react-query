@@ -1,4 +1,4 @@
-import axios from 'axios';
+
 import React, { useEffect, useState } from 'react'
 import { useQuery } from 'react-query';
 
@@ -11,13 +11,13 @@ export default function Home() {
 
     setIsLoading(true);
     let data = await fetch('https://swapi.dev/api/people/')
-    // setstate(await data.json())
+    
     setIsLoading(false);
 
     return await data.json();
   }
 
-  const {data ,status} = useQuery('fetch data',getData);
+  const {data } = useQuery('fetch data',getData);
  
   useEffect(() => {
     
